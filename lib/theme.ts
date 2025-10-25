@@ -1,0 +1,86 @@
+import { DarkTheme, DefaultTheme, type Theme } from '@react-navigation/native';
+ 
+export const THEME = {
+  light: {
+    background: 'hsl(0 0% 100%)',
+    foreground: 'hsl(217.2414 32.5843% 17.4510%)',
+    card: 'hsl(60 4.7619% 95.8824%)',
+    cardForeground: 'hsl(217.2414 32.5843% 17.4510%)',
+    popover: 'hsl(60 4.7619% 95.8824%)',
+    popoverForeground: 'hsl(217.2414 32.5843% 17.4510%)',
+    primary: 'hsl(238.7324 83.5294% 66.6667%)',
+    primaryForeground: 'hsl(0 0% 100%)',
+    secondary: 'hsl(24.0000 5.7471% 82.9412%)',
+    secondaryForeground: 'hsl(215 13.7931% 34.1176%)',
+    muted: 'hsl(20 5.8824% 90%)',
+    mutedForeground: 'hsl(220 8.9362% 46.0784%)',
+    accent: 'hsl(292.5000 44.4444% 92.9412%)',
+    accentForeground: 'hsl(216.9231 19.1176% 26.6667%)',
+    destructive: 'hsl(0 84.2365% 60.1961%)',
+    destructiveForeground: 'hsl(0 0% 100%)',
+    border: 'hsl(24.0000 5.7471% 82.9412%)',
+    input: 'hsl(24.0000 5.7471% 82.9412%)',
+    ring: 'hsl(238.7324 83.5294% 66.6667%)',
+    radius: '1.25rem',
+    chart1: 'hsl(238.7324 83.5294% 66.6667%)',
+    chart2: 'hsl(243.3962 75.3555% 58.6275%)',
+    chart3: 'hsl(244.5205 57.9365% 50.5882%)',
+    chart4: 'hsl(243.6522 54.5024% 41.3725%)',
+    chart5: 'hsl(242.1687 47.4286% 34.3137%)',
+  },
+
+  dark: {
+    background: 'rgb(30, 27, 24)',
+    foreground: 'hsl(0 0% 100%)',
+    card: 'rgb(44, 40, 37)',
+    cardForeground: 'hsl(214.2857 31.8182% 91.3725%)',
+    popover: 'hsl(25.7143 8.6420% 15.8824%)',
+    popoverForeground: 'hsl(214.2857 31.8182% 91.3725%)',
+    primary: 'hsl(234.4538 89.4737% 73.9216%)',
+    primaryForeground: 'hsl(30 11.1111% 10.5882%)',
+    secondary: 'hsl(25.7143 6.4220% 21.3725%)',
+    secondaryForeground: 'hsl(216.0000 12.1951% 83.9216%)',
+    muted: 'hsl(30 10.7143% 10.9804%)',
+    mutedForeground: 'hsl(217.8947 10.6145% 64.9020%)',
+    accent: 'hsl(25.7143 5.1095% 26.8627%)',
+    accentForeground: 'hsl(216.0000 12.1951% 83.9216%)',
+    destructive: 'hsl(0 84.2365% 60.1961%)',
+    destructiveForeground: 'hsl(30 11.1111% 10.5882%)',
+    border: 'hsl(25.7143 6.4220% 21.3725%)',
+    input: 'hsl(25.7143 6.4220% 21.3725%)',
+    ring: 'hsl(234.4538 89.4737% 73.9216%)',
+    radius: '1.25rem',
+    chart1: 'hsl(234.4538 89.4737% 73.9216%)',
+    chart2: 'hsl(238.7324 83.5294% 66.6667%)',
+    chart3: 'hsl(243.3962 75.3555% 58.6275%)',
+    chart4: 'hsl(244.5205 57.9365% 50.5882%)',
+    chart5: 'hsl(243.6522 54.5024% 41.3725%)',
+  },
+};
+
+
+ 
+export const NAV_THEME: Record<'light' | 'dark', Theme> = {
+  light: {
+    ...DefaultTheme,
+    colors: {
+      background: THEME.light.background,
+      border: THEME.light.border,
+      card: THEME.light.card,
+      notification: THEME.light.destructive,
+      primary: THEME.light.primary,
+      text: THEME.light.foreground,
+    },
+  },
+  dark: {
+    ...DarkTheme,
+    colors: {
+      background: THEME.dark.background,
+      border: THEME.dark.border,
+      card: THEME.dark.card,
+      notification: THEME.dark.destructive,
+      primary: THEME.dark.primary,
+      text: THEME.dark.foreground,
+    },
+  },
+};
